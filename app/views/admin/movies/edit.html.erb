@@ -1,0 +1,25 @@
+<h2> Edit a Movie! </h2>
+
+<%= simple_form_for [:admin, @movie] do |f| %>
+
+  <div class="group">
+    <%= f.input :title %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description %>
+  </div>
+
+  <% if @movie.image.present? %>
+    <span>目前产品图</span>
+    <br>
+    <%= image_tag(@movie.image.thumb.url) %>
+  <% end %>
+  <div class="group">
+
+    <%= f.input :image, as: :file %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

@@ -1,0 +1,9 @@
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to movie_path(movie) do %>
+      <%= render_movie_image_present(movie) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

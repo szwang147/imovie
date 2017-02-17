@@ -1,0 +1,20 @@
+<tbody>
+  <tr>
+    <td><%= @movie.id %></td>
+    <td>
+      <%= link_to movie_path(@movie) do %>
+        <% if @movie.image.present? %>
+          <%= image_tag(@movie.image.thumb.url, class:"thumbnail") %>
+        <% else %>
+          <%= image_tag("http://img.wmtp.net/wp-content/uploads/52eb1aac1ae1b176.jpg600x600.jpg", class:"thumbnail") %>
+        <% end %>
+      <% end %>
+    </td>
+    <td><%= @movie.title %></td>
+    <td>
+      <%= link_to("edit", edit_admin_movie_path(@movie), class:"btn-sm btn-info") %>
+      <%= link_to("delete", admin_movie_path(@movie), method: :delete, class:"btn-sm btn-danger") %>
+
+    </td>
+  </tr>
+</tbody>

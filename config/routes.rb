@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   end
 
   resources :movies do
-    resources :shows
+    resources :shows do
+      resources :seats
+    end
   end
 
   root "movies#index"

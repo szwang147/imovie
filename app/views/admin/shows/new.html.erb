@@ -1,0 +1,19 @@
+<h2> New Show! </h2>
+
+<%= simple_form_for [:admin, @show] do |f| %>
+
+  <div class="group">
+    <%= f.input :movie_id %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price %>
+  </div>
+
+  <div class="group">
+    <%= f.input :timetable %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

@@ -16,7 +16,7 @@
     <tr>
       <td><%= movie.id %></td>
       <td>
-        <%= link_to movie_path(movie) do %>
+        <%= link_to admin_movie_path(movie) do %>
           <% if movie.image.present? %>
             <%= image_tag(movie.image.thumb.url, class:"thumbnail") %>
           <% else %>

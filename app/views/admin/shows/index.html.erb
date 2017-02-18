@@ -17,13 +17,13 @@
     <tr>
       <td><%= show.id %></td>
       <td>
-        <%#= link_to admin_movie_path(show.movie) do %>
-          <%# if show.movie.image.present? %>
-            <%#= image_tag(show.movie.image.thumb.url, class:"thumbnail") %>
-          <%# else %>
-            <%#= image_tag("http://img.wmtp.net/wp-content/uploads/52eb1aac1ae1b176.jpg600x600.jpg", class:"thumbnail") %>
-          <%# end %>
-        <%# end %>
+        <%= link_to "#" do %>
+          <% if show.movie.image.present? %>
+            <%= image_tag(show.movie.image.thumb.url, class:"thumbnail") %>
+          <% else %>
+            <%= image_tag("http://img.wmtp.net/wp-content/uploads/52eb1aac1ae1b176.jpg600x600.jpg", class:"thumbnail") %>
+          <% end %>
+        <% end %>
       </td>
       <td><%= show.timetable %></td>
       <td><%= show.price %></td>

@@ -9,12 +9,12 @@ class Admin::ShowsController < ApplicationController
 
   def new
     @show = Show.new
+    @movies = Movie.all
   end
 
 
   def create
     @show = Show.new(show_params)
-
     if @show.save
       redirect_to admin_shows_path
       flash[:notice] = "create"
@@ -43,7 +43,7 @@ class Admin::ShowsController < ApplicationController
     @show.destroy
     flash[:notice] = "delete"
   end
-  
+
   private
   def show_params
     params.require(:show).permit(:price, :timetable, :movie_id)

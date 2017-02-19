@@ -3,7 +3,7 @@
 <%= simple_form_for [:admin, @show] do |f| %>
 
   <div class="group">
-    <%= f.input :movie_id %>
+    <%= f.input :movie_id, collection: @movies.collect(&:title) %>
   </div>
 
   <div class="group">

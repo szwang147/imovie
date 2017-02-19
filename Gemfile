@@ -47,7 +47,7 @@ gem 'letter_opener', group: :development
 # console 模式测试信件预览，并且收到信件
 gem "aasm"
 # 管理订单
-
+gem "pry"
 gem "figaro"
 gem "fog"
 
